@@ -1,7 +1,5 @@
-import { h, render } from 'preact'
+import { h } from 'preact'
 
-const App = () => (
+export const App = () => (
   <div>Hello world</div>
 )
-
-render(<App />, document.getElementById('root'))

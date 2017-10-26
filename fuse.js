@@ -3,6 +3,7 @@ const {
   BabelPlugin,
   QuantumPlugin,
   WebIndexPlugin,
+  EnvPlugin,
   Sparky,
 } = require('fuse-box')
 
@@ -18,6 +19,9 @@ Sparky.task('config', () => {
     useTypescriptCompiler: true,
     experimentalFeatures: true,
     plugins: [
+      EnvPlugin({
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      }),
       BabelPlugin({
         config: {
           plugins: [
@@ -34,11 +38,11 @@ Sparky.task('config', () => {
 
   vendor = fuse
     .bundle('vendor')
-    .instructions(`~ index.tsx`)
+    .instructions(`~ main.tsx`)
 
   app = fuse
     .bundle('app')
-    .instructions(`!> [index.tsx]`)
+    .instructions(`!> [main.tsx]`)
 })
 
 Sparky.task('clean', () => Sparky.src('dist').clean('dist'))
