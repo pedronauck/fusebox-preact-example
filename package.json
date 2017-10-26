@@ -1,0 +1,18 @@
+{
+  "name": "fusebox-preact-example",
+  "description": "Sample application using Preact and FuseBox",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "node fuse"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "fuse-box": "^2.3.3",
+    "typescript": "^2.1.6"
+  },
+  "dependencies": {
+    "preact": "^8.2.6"
+  }
+}

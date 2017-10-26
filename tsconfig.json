@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+		"target": "es6",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "noImplicitAny": true
+	},
+	"include": [
+		"src/**/*"
+	]
+}
