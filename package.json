@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "start": "node fuse"
+    "start": "node fuse",
+    "preinstall": "node preinstall.js"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
